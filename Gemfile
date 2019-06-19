@@ -3,6 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.3'
 
+gem 'simple_form'
 ## Gemfile for Rails 3+, Sinatra, or Merb
 gem 'will_paginate', '> 3.0'
 #paginate not working:  <%= will_paginate @places, previous_label: h("<"), next_label: h(">") %>
