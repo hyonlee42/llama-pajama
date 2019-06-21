@@ -73,6 +73,7 @@ gem 'bootstrap', '4.0.0.alpha6'
 
 gem "font-awesome-rails"
 gem 'devise'
+gem "geocoder"
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.3.3'
