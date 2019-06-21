@@ -1,5 +1,5 @@
 class PlacesController < ApplicationController
-  before_action :authenticate_user!, only: [:new, :create, :edit]
+  before_action :authenticate_user!, only: [:new, :create, :edit, :update]
 
 
   def index
@@ -23,8 +23,9 @@ class PlacesController < ApplicationController
   def edit
     @place = Place.find(params[:id])
 
-    if @place.user != current_user
-      return render plain: 'Not Allwed', status: forbidden
+      if @place.user != current_user
+        return render plain: 'Not Allowed', status: :forbidden
+      end  
   end  
 
   def update
@@ -44,4 +45,5 @@ private
   def place_params
     params.require(:place).permit(:name, :description, :address)  
   end
+
 end
