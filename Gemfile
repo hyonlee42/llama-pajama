@@ -3,6 +3,9 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.3'
 
+## carrierwave
+gem 'carrierwave', '>= 2.0.0.rc', '< 3.0'
+
 gem 'simple_form'
 ## Gemfile for Rails 3+, Sinatra, or Merb
 gem 'will_paginate', '> 3.0'
