@@ -83,7 +83,13 @@
 </div>
 
 
-<h1>Comments</h1>
+<h1 class= "float-left">Comments</h1>
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary btn-lg float-right" data toggle= "modal" data-target="#myModal">
+  Add a comment
+</button>
+
+<div class="clear"></div>
 
 <% @place.comments.each do |comment| %>
   <div>
