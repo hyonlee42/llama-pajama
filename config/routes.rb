@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   root 'places#index'
+  root 'photos#create'
   resources :places do
     resources :comments, only: :create
     resources :photos, only: :create
