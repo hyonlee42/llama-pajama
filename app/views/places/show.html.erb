@@ -53,7 +53,12 @@
   <%= f.submit "Add a Comment", class: 'btn btn-primary' %>
 <% end %>
 
+<div class="col-10 offset-1">
+<%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
+  <%= f.input :picture %>
 
+  <%= f.submit "Upload a photo", class: 'btn btn-primary' %>
+<% end %>
 
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
