@@ -8,14 +8,16 @@ class PhotosController < ApplicationController
   end
 
   def show
+    @photo = Photo.find(params[:picture])
   end
 
   def index
+    @photos = Photo.all
   end
 
   private
 
   def photo_params
-    params.require(:photo).permit(:place_id, :user_id)
-
+    params.require(:photo).permit(:caption, :picture)
+  end
 end
