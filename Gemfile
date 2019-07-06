@@ -8,10 +8,9 @@ gem 'carrierwave', '>= 2.0.0.rc', '< 3.0'
 
 gem 'simple_form'
 ## Gemfile for Rails 3+, Sinatra, or Merb
-gem 'will_paginate', '> 3.0'
+gem 'will_paginate', '~> 3.1.1'
 #paginate not working:  <%= will_paginate @places, previous_label: h("<"), next_label: h(">") %>
-#Why has no one told us to delete the gem bootstrap line below, it conflicts with the 4.0.0alpha6 version at the bottom
-#gem 'bootstrap', '~> 4.3.1'
+
 gem 'jquery-rails'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'

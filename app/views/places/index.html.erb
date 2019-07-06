@@ -57,4 +57,6 @@
 
 <% end %>
 
-
+<div class="digg_pagination col-10 offset-1">
+<%= will_paginate @products, previous_label: h("<"), next_label: h(">") %>
+</div>
