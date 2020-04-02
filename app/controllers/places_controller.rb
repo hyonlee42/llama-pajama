@@ -13,6 +13,7 @@ class PlacesController < ApplicationController
 
   def create
     @place = current_user.places.create(place_params)
+# ????
     if @place.valid? && @place.address.valid? && @place.description.valid?
       redirect_to root_path
     else
@@ -40,7 +41,7 @@ class PlacesController < ApplicationController
     if @place.user != current_user
       return render plain: 'Not Allowed', status: :forbidden
     end
-
+# ????
     @place.update_attributes(place_params)
     if @place.valid? && @place.address.valid? && @place.description.valid?
       redirect_to root_path
